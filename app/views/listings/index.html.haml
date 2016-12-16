@@ -29,7 +29,6 @@
           %td= listing.bedrooms
           %td= listing.bathrooms
           %td= listing.agent
-          -# %td= image_tag attachment_url(@listing, :pictures), size: "200x200"
           %td
             - if listing.pictures
               = image_tag attachment_url(listing, :pictures)
