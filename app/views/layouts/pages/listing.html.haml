@@ -1,0 +1,105 @@
+!!!
+%html{:lang => "en"}
+	%head
+		%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+		%meta{:charset => "utf-8"}/
+		%meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+		%meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+		%meta{:content => "", :name => "description"}/
+		%meta{:content => "", :name => "author"}/
+		%title Listing
+		/ Bootstrap Core CSS
+		%link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+		/ Custom CSS
+		%link{:href => "css/portfolio-item.css", :rel => "stylesheet"}/
+		/ HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		/ WARNING: Respond.js doesn't work if you view the page via file://
+		/[if lt IE 9]
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	%body
+		%nav.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+			.container
+				.navbar-header
+					%button.navbar-toggle.collapsed{type: "button", data: {toggle: "collapse", target: "#navbar"}, aria: {expanded: "false", controls: "navbar"} }
+						%span.sr-only Toggle navigation
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+          = link_to "#", class: "navbar-brand" do
+            = image_tag("home_hunting.jpg", size: "60x30")
+				#navbar.collapse.navbar-collapse
+					%ul.nav.navbar-nav
+						%li.active
+							= link_to "Home", root_path
+						%li
+							= link_to "Listings", pages_listings_path
+						%li
+							= link_to "Agents", pages_agents_path
+            %li
+              = link_to "About", pages_about_path
+            %li
+              = link_to "Help", pages_help_path
+          -# %ul.nav.navbar-nav.navbar-right
+          -#   - if user_signed_in?
+          -#     %li
+          -#       %p.navbar-text
+          -#         = user.email
+          -#   %li
+          -#     - if user_signed_in?
+          -#       = link_to "LogOut", destroy_user_session_path, method: :delete
+          -#     - else
+          -#       = link_to "LogIn", new_user_session_path
+
+		.container
+			.row
+				.col-lg-12
+					%h1.page-header
+						= user.address
+			.row
+				.col-md-8
+					%img.img-responsive{:alt => "Image_1", :src => "http://placehold.it/750x500"}/
+				.col-md-4
+					%h3 Description
+					  %p
+              = user.description
+          %h3 Need To Know
+            %p Price:
+              = user.price
+            -# %p Seller:
+            -#   = user.user
+            -# %p Selling Agent
+            -#   = ??
+					%h3 Property Features
+  					%ul
+  						%li Square Feet:
+                = user.sq_ft
+  						%li Bathrooms:
+                = user.bathrooms
+  						%li Bedrooms:
+                = user.bedrooms
+
+			.row
+				.col-lg-12
+					%h3.page-header More Pictures
+				.col-sm-3.col-xs-6
+						%img.img-responsive.portfolio-item{:alt => "Image_2", :src => "http://placehold.it/500x300"}/
+				.col-sm-3.col-xs-6
+						%img.img-responsive.portfolio-item{:alt => "Image_3", :src => "http://placehold.it/500x300"}/
+				.col-sm-3.col-xs-6
+						%img.img-responsive.portfolio-item{:alt => "Image_4", :src => "http://placehold.it/500x300"}/
+				.col-sm-3.col-xs-6
+						%img.img-responsive.portfolio-item{:alt => "Image_5", :src => "http://placehold.it/500x300"}/
+			/ /.row
+			%hr/
+			/ Footer
+			%footer
+				.row
+					.col-lg-12
+						%p Copyright © Your Website 2016
+				/ /.row
+		/ /.container
+		/ jQuery
+		%script{:src => "js/jquery.js"}
+		/ Bootstrap Core JavaScript
+		%script{:src => "js/bootstrap.min.js"}
