@@ -13,13 +13,13 @@
         %li.active
           = link_to "Home", root_path
         %li
-          = link_to "Listings", pages_listings_path
+          = link_to "Listings", root_path
         %li
-          = link_to "Agents", pages_agents_path
+          = link_to "Agents", root_path
         %li
-          = link_to "About", pages_about_path
+          = link_to "About", root_path
         %li
-          = link_to "Help", pages_help_path
+          = link_to "Help", root_path
       -# %ul.nav.navbar-nav.navbar-right
       -#   - if user_signed_in?
       -#     %li
@@ -35,46 +35,54 @@
   .row
     .col-lg-12
       %h1.page-header
-        = user.address
+        -# = user.address
   .row
     .col-md-8
       %img.img-responsive{:alt => "Image_1", :src => "http://placehold.it/750x500"}/
     .col-md-4
-      %h3 Description
+      %h3
+        Description
         %p
-          = user.description
-      %h3 Need To Know
-        %p Price:
-          = user.price
+          -# = user.description
+      %h3
+        Need To Know
+        %p
+          Price:
+          -# = user.price
         -# %p Seller:
         -#   = user.user
         -# %p Selling Agent
         -#   = ??
-      %h3 Property Features
+      %h3
+        Property Features
         %ul
-          %li Square Feet:
-            = user.sq_ft
-          %li Bathrooms:
-            = user.bathrooms
-          %li Bedrooms:
-            = user.bedrooms
+          %li
+            -# Square Feet:
+            -#   = user.sq_ft
+          %li
+            -# Bathrooms:
+            -#   = user.bathrooms
+          %li
+            -# Bedrooms:
+            -#   = user.bedrooms
 
   .row
     .col-lg-12
-      %h3.page-header More Pictures
+      %h3.page-header
+        More Pictures
     .col-sm-3.col-xs-6
-        %img.img-responsive.portfolio-item{:alt => "Image_2", :src => "http://placehold.it/500x300"}/
+      %img.img-responsive.portfolio-item{:alt => "Image_2", :src => "http://placehold.it/500x300"}/
     .col-sm-3.col-xs-6
-        %img.img-responsive.portfolio-item{:alt => "Image_3", :src => "http://placehold.it/500x300"}/
+      %img.img-responsive.portfolio-item{:alt => "Image_3", :src => "http://placehold.it/500x300"}/
     .col-sm-3.col-xs-6
-        %img.img-responsive.portfolio-item{:alt => "Image_4", :src => "http://placehold.it/500x300"}/
+      %img.img-responsive.portfolio-item{:alt => "Image_4", :src => "http://placehold.it/500x300"}/
     .col-sm-3.col-xs-6
-        %img.img-responsive.portfolio-item{:alt => "Image_5", :src => "http://placehold.it/500x300"}/
-  / /.row
+      %img.img-responsive.portfolio-item{:alt => "Image_5", :src => "http://placehold.it/500x300"}/
+
   %hr/
-  / Footer
+
   %footer
     .row
       .col-lg-12
-        %p Copyright © Your Website 2016
-    / /.row
+        %p
+          Copyright © Your Website 2016

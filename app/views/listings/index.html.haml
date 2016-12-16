@@ -30,7 +30,9 @@
           %td= listing.bedrooms
           %td= listing.bathrooms
           %td= listing.agent
-          %td= listing.pictures
+          %td= image_tag attachment_url(@listing, :picture), size: "200x200"
+          -# %td= listing.pictures
+
           %td
             = link_to listing do
               %span.glyphicon.glyphicon-ok
