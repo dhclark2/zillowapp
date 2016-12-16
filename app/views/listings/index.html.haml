@@ -30,4 +30,6 @@
           %td= listing.bathrooms
           %td= listing.agent
           -# %td= image_tag attachment_url(@listing, :pictures), size: "200x200"
-          %td= image_tag attachment_url(@listing, :pictures)
+          %td
+            - if story.cover_image
+              = image_tag attachment_url(listing, :pictures)
