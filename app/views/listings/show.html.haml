@@ -1,0 +1,28 @@
+.page-header
+  = link_to listings_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_listing_path(@listing), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show listing
+
+%dl.dl-horizontal
+  %dt Seller:
+  %dd= @listing.seller
+  %dt Address:
+  %dd= @listing.address
+  %dt Description:
+  %dd= @listing.description
+  %dt Price:
+  %dd= @listing.price
+  %dt Sq ft:
+  %dd= @listing.sq_ft
+  %dt Bedrooms:
+  %dd= @listing.bedrooms
+  %dt Bathrooms:
+  %dd= @listing.bathrooms
+  %dt Agent:
+  %dd= @listing.agent
+  %dt Pictures:
+  %dd= @listing.pictures
