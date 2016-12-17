@@ -1,3 +1,3 @@
 class Listing < ApplicationRecord
-  attachment :pictures
+  attachment :picture
 end

@@ -30,5 +30,5 @@
           %td= listing.bathrooms
           %td= listing.agent
           %td
-            - if listing.pictures
-              = image_tag attachment_url(listing, :pictures)
+            - if listing.picture
+              = image_tag attachment_url(listing, :picture)

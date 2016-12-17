@@ -14,7 +14,7 @@ listings = Listing.create(
       bedrooms: 4,
       bathrooms: 2.5,
       agent: "Hamilton Clark",
-      pictures: File.open(Rails.root.join("db/seeds/images/1_1.jpg"))
+      picture: File.open(Rails.root.join("db/seeds/images/1_1.jpg"))
     },
 
     {
@@ -26,7 +26,7 @@ listings = Listing.create(
       bedrooms: 3,
       bathrooms: 3,
       agent: "Jasmine Frantz",
-      pictures: File.open(Rails.root.join("db/seeds/images/2_1.jpg"))
+      picture: File.open(Rails.root.join("db/seeds/images/2_1.jpg"))
     },
 
     {
@@ -38,7 +38,7 @@ listings = Listing.create(
       bedrooms: 3,
       bathrooms: 2,
       agent: "Mark Lombardi",
-      pictures: File.open(Rails.root.join("db/seeds/images/3_1.jpg"))
+      picture: File.open(Rails.root.join("db/seeds/images/3_1.jpg"))
     },
 
     {
@@ -50,7 +50,7 @@ listings = Listing.create(
       bedrooms: 3,
       bathrooms: 2,
       agent: "Kenia Valldarez",
-      pictures: File.open(Rails.root.join("db/seeds/images/4_1.jpg"))
+      picture: File.open(Rails.root.join("db/seeds/images/4_1.jpg"))
     }
   ]
 )
