@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  # before_action :authenticate_user!, except:[:index]
+  before_action :authenticate_user!, except:[:index]
 
   # GET /listings
   def index
