@@ -7,22 +7,61 @@
     Edit
   %h1 Show listing
 
-%dl.dl-horizontal
-  %dt Seller:
-  %dd= @listing.seller
-  %dt Address:
-  %dd= @listing.address
-  %dt Description:
-  %dd= @listing.description
-  %dt Price:
-  %dd= @listing.price
-  %dt Sq ft:
-  %dd= @listing.sq_ft
-  %dt Bedrooms:
-  %dd= @listing.bedrooms
-  %dt Bathrooms:
-  %dd= @listing.bathrooms
-  %dt Agent:
-  %dd= @listing.agent
-  %dt Pictures:
-  %dd= @listing.pictures
+.container
+  .row
+    .col-lg-12
+      %h2.page-header
+        = @listing.address
+  .row
+    .col-md-8
+      = image_tag attachment_url(@listing, :picture), size: "750x500"
+
+    .col-md-4
+      %h3
+        Description
+      %p.text-justify
+        = @listing.description
+      %h3
+        Need To Know
+      %p
+        Price:
+        = @listing.price
+      %p
+        Seller:
+        = @listing.seller
+      %p
+        Selling Agent:
+        = @listing.agent
+      %h3
+        Property Features
+      %ul
+        %li
+          Square Feet:
+          = @listing.sq_ft
+        %li
+          Bathrooms:
+          = @listing.bathrooms
+        %li
+          Bedrooms:
+          = @listing.bedrooms
+
+  .row
+    .col-lg-12
+      %h3.page-header
+        More Pictures
+    .col-sm-3.col-xs-6
+      %img.img-responsive.portfolio-item{:alt => "Image_2", :src => "http://placehold.it/500x300"}/
+    .col-sm-3.col-xs-6
+      %img.img-responsive.portfolio-item{:alt => "Image_3", :src => "http://placehold.it/500x300"}/
+    .col-sm-3.col-xs-6
+      %img.img-responsive.portfolio-item{:alt => "Image_4", :src => "http://placehold.it/500x300"}/
+    .col-sm-3.col-xs-6
+      %img.img-responsive.portfolio-item{:alt => "Image_5", :src => "http://placehold.it/500x300"}/
+
+  %hr/
+
+  %footer
+    .row
+      .col-lg-12
+        %p
+          Copyright © Ham is super awesome - 2016

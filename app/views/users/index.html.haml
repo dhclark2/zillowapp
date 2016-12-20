@@ -1,0 +1,27 @@
+
+.container
+  - @users.each do |user|
+    .row
+      .col-md-8
+        = image_tag attachment_url(user, :picture), size: "500x250"
+      .col-md-4
+        %h3
+          Agent
+        %p
+          Name:
+          = user.agent_name
+        %p
+          Phone:
+          = user.phone
+        %p
+          Email:
+          = user.email
+        %p
+          Address:
+          = user.address
+    .row
+      .col-lg-12
+        %h2.page-header
+          Bio
+        %p.text-justify
+          = user.description

@@ -30,25 +30,23 @@
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              = link_to "Home", root_path
+              = link_to "Listings", root_path
             %li
-              = link_to "Listings", pages_listing_path
-            %li
-              = link_to "Agents", pages_agents_path
+              = link_to "Agents", users_path
             %li
               = link_to "About", pages_about_path
             %li
               = link_to "Help", pages_help_path
-          -# %ul.nav.navbar-nav.navbar-right
-          -#   - if user_signed_in?
-          -#     %li
-          -#       %p.navbar-text
-          -#         = user.email
-          -#   %li
-          -#     - if user_signed_in?
-          -#       = link_to "LogOut", destroy_user_session_path, method: :delete
-          -#     - else
-          -#       = link_to "LogIn", new_user_session_path
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li
+                %p.navbar-text
+                  -# = user.email
+            %li
+              - if user_signed_in?
+                = link_to "LogOut", destroy_user_session_path, method: :delete
+              - else
+                = link_to "LogIn", new_user_session_path
 
     .container
       - flash.each do |name, msg|

@@ -2,33 +2,62 @@
   = link_to new_listing_path, class: 'btn btn-primary' do
     %span.glyphicon.glyphicon-plus
     New Listing
-  %h1 Listing listings
+    
+  %h1 All Listings
 
-.table-responsive
-  %table.table.table-striped.table-bordered.table-hover
-    %thead
-      %tr
-        %th Seller
-        %th Address
-        %th Description
-        %th Price
-        %th Sq ft
-        %th Bedrooms
-        %th Bathrooms
-        %th Agent
-        %th Pictures
 
-    %tbody
-      - @listings.each do |listing|
-        %tr
-          %td= listing.seller
-          %td= listing.address
-          %td= listing.description
-          %td= listing.price
-          %td= listing.sq_ft
-          %td= listing.bedrooms
-          %td= listing.bathrooms
-          %td= listing.agent
-          %td
-            - if listing.picture
-              = image_tag attachment_url(listing, :picture)
+-#             - if listing.picture
+-#               = image_tag attachment_url(listing, :picture), size: "300x300"
+-#           %td
+-#             = link_to listing do
+-#               %span.glyphicon.glyphicon-ok
+-#           %td
+-#             = link_to edit_listing_path(listing) do
+-#               %span.glyphicon.glyphicon-pencil
+
+.container
+  - @listings.each do |listing|
+    .row
+      .col-lg-12
+        %h2.page-header
+          = listing.address
+    .row
+      .col-md-8
+        = image_tag attachment_url(listing, :picture), size: "750x500"
+      .col-md-4
+        %h3
+          Description
+        %p.text-justify
+          = listing.description
+    .row
+      .col-md-4
+        %h3
+          Property Features
+        %ul
+          %li
+            Square Feet:
+            = listing.sq_ft
+          %li
+            Bathrooms:
+            = listing.bathrooms
+          %li
+            Bedrooms:
+            = listing.bedrooms
+      .col-md-4
+        %h3
+          Need To Know
+        %p
+          Price:
+          = listing.price
+        %p
+          Seller:
+          = listing.seller
+        %p
+          Selling Agent:
+          = listing.agent
+          -# link_to show_user_path(user)
+      .col-md-4
+        %h2
+          Show
+          = link_to listing do
+            %span.glyphicon.glyphicon-home

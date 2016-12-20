@@ -1,7 +1,50 @@
+users = User.create(
+  [
+    {
+      agent_name: "Hamilton Clark",
+      email: "hamilton.clark@example.com",
+      phone: "123-456-7890",
+      address: "123 Example, FL",
+      encrypted_password: "123456",
+      picture: File.open(Rails.root.join("db/seeds/images/hamilton_clark.png")),
+      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
+      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+    },
 
-# george = User.create(user_name: "George Orwell", email: "george.orwell@example.com", password: "123456", password_confirmation: "123456")
-#
-# scott = User.create(user_name: "Scott Fitzgerald", email: "scott.fitzgerald@example.com", password: "123456", password_confirmation: "123456")
+    {
+      agent_name: "Jasmine Frantz",
+      email: "jasmine.frantz@example.com",
+      phone: "123-456-7890",
+      address: "123 Example, FL",
+      encrypted_password: "123456",
+      picture: File.open(Rails.root.join("db/seeds/images/jasmine_frantz.png")),
+      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
+      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+    },
+
+    {
+      agent_name: "Mark Lombardi",
+      email: "mark.lombardi@example.com",
+      phone: "123-456-7890",
+      address: "123 Example, FL",
+      encrypted_password: "123456",
+      picture: File.open(Rails.root.join("db/seeds/images/mark_lombardi.png")),
+      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
+      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+    },
+
+    {
+      agent_name: "Kenia Valldarez",
+      email: "kenia.valldarez@example.com",
+      phone: "123-456-7890",
+      address: "123 Example, FL",
+      encrypted_password: "123456",
+      picture: File.open(Rails.root.join("db/seeds/images/kenia_valldarez.png")),
+      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
+      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+    }
+  ]
+)
 
 listings = Listing.create(
   [

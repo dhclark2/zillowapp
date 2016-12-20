@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  resources :listings
+  devise_for :users
+  resources :listings, :users
 
   root "listings#index"
-
-  get "pages/listing"
-
-  get "pages/agents"
 
   get "pages/help"
 
