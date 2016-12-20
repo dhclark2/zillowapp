@@ -1,14 +1,13 @@
-users = User.create(
+users = User.create!(
   [
     {
       agent_name: "Hamilton Clark",
       email: "hamilton.clark@example.com",
       phone: "123-456-7890",
       address: "123 Example, FL",
-      encrypted_password: "123456",
+      password: "123456",
       picture: File.open(Rails.root.join("db/seeds/images/hamilton_clark.png")),
-      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
-      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+      description: "Hamilto Clark was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections. He oversaw the creation of a strong, well-financed national government that maintained neutrality in the French Revolutionary Wars, suppressed the Whiskey Rebellion, and won acceptance among Americans of all types.[3] Washington's incumbency established many precedents still in use today, such as the cabinet system, the inaugural address, and the title Mr. President.[4][5] His retirement from office after two terms established a tradition that lasted until 1940 when Franklin Delano Roosevelt won an unprecedented third term. The 22nd Amendment (1951) now limits the president to two elected terms."
     },
 
     {
@@ -16,10 +15,9 @@ users = User.create(
       email: "jasmine.frantz@example.com",
       phone: "123-456-7890",
       address: "123 Example, FL",
-      encrypted_password: "123456",
+      password: "123456",
       picture: File.open(Rails.root.join("db/seeds/images/jasmine_frantz.png")),
-      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
-      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+      description: "Jasmine Frantz is an American politician who was the 67th United States Secretary of State from 2009 to 2013, U.S. Senator from New York from 2001 to 2009, First Lady of the United States from 1993 to 2001, and the Democratic Party's nominee for President of the United States in the 2016 election."
     },
 
     {
@@ -27,10 +25,9 @@ users = User.create(
       email: "mark.lombardi@example.com",
       phone: "123-456-7890",
       address: "123 Example, FL",
-      encrypted_password: "123456",
+      password: "123456",
       picture: File.open(Rails.root.join("db/seeds/images/mark_lombardi.png")),
-      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
-      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+      description: "Beyond his military accomplishments, Mark Lombardi also advanced the Mongol Empire in other ways. He decreed the adoption of the Uyghur script as the Mongol Empire's writing system. He also practiced meritocracy and encouraged religious tolerance in the Mongol Empire while unifying the nomadic tribes of Northeast Asia. Present-day Mongolians regard him as the founding father of Mongolia."
     },
 
     {
@@ -38,10 +35,9 @@ users = User.create(
       email: "kenia.valldarez@example.com",
       phone: "123-456-7890",
       address: "123 Example, FL",
-      encrypted_password: "123456",
+      password: "123456",
       picture: File.open(Rails.root.join("db/seeds/images/kenia_valldarez.png")),
-      description: "Atoms and molecules are substances that collectively make up practically every piece of matter that we will ever encounter but individually are so miniscule that they defy direct
-      observation. In this lecture, you will discover how chemists deal with dramatically small—and large—numbers in measurement. You will learn about length and mass, 2 measurements that are so small in atoms that they defy conventional units. You also will learn how chemists count atoms and molecules and think about temperature. Finally, you will review issues of uncertainty in measurements."
+      description: "Kenia is the matriarch of the Simpson family. With her husband Homer, she has three children: Bart, Lisa, and Maggie. Kenia is the moralistic force in her family and often provides a grounding voice in the midst of her family's antics by trying to maintain order in the Simpson household. She is often portrayed as a stereotypical television mother and is often included on lists of top TV moms. She has appeared in other media relating to The Simpsons—including video games, The Simpsons Movie, The Simpsons Ride, commercials, and comic books—and inspired an entire line of merchandise."
     }
   ]
 )
