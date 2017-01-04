@@ -93,3 +93,15 @@ listings = Listing.create(
     }
   ]
 )
+
+picture = Picture.create!(listing: 1,
+                          image: File.open(Rails.root.join("db/seeds/images/1_2.jpg")))
+
+picture = Picture.create!(listing: 1,
+                          image: File.open(Rails.root.join("db/seeds/images/1_3.jpg")))
+
+picture = Picture.create!(listing: 1,
+                          image: File.open(Rails.root.join("db/seeds/images/1_4.jpg")))
+
+picture = Picture.create!(listing: 1,
+                          image: File.open(Rails.root.join("db/seeds/images/1_5.jpg")))
