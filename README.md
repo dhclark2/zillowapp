@@ -1,15 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Unfinished Work:
+- seed multiple pictures to each listing instead of only one.  How to create listing.new with :picture accepting multiple values
+  - images for pagination are currently stored in assets/images.  Once seed issue is resolved, move these images into the db/seeds/images folder
 
-Things you may want to cover:
+- Kaminari gem is installed and configured but have not figured out how to create a pagination on the listing show pages (/listings/1)
+
+- Resolve issue with formatting paginated images to the correct size, with padding.
+
+* Purpose
+List homes for sale.  Each home has pertinent information associated with it such as price, seller, agent, and images of the home.
+
+* How
+- Upload screenshots here with descriptions (images in assets)
+
+* Result
+- Upload screenshot of landing page and agent page (images in assets)
 
 * Ruby version
+2.4.0
 
 * System dependencies
 
-* Configuration
+<!-- * Configuration
 
 * Database creation
 
@@ -21,4 +34,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
